@@ -1,0 +1,7 @@
+name: v2
+channels:
+  - defaults
+dependencies:
+  - python=2.7
+  - pip:
+    - mlflow

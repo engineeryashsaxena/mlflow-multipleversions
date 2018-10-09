@@ -1,0 +1,10 @@
+name: v2
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      splitter: {type: str, default: 'best'}
+      criterion: {type: str, default: 'gini'}
+    command: "python Modelv2.py {splitter} {criterion}"

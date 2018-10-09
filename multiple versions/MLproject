@@ -1,0 +1,10 @@
+name: multiple versions
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      model_version: {type: int, default: 1}
+      
+    command: "python switch.py {model_version} "
