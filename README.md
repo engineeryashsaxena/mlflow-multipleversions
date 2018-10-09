@@ -23,12 +23,16 @@ You can run different models and switch between them using the above command . A
 Each Model is also translated into a MLflow project . Details are as follows:
 
 Details of Model V1 :
-  -> Predictors are : 
-  -> Hyperparameters are : random_split ( default value is 0)  ;  max_depth ( default value is 3) 
+ 
+      Predictors are : ['Pclass','Age','Parch']
+   
+      Hyperparameters are : random_split ( default value is 0)  ;  max_depth ( default value is 3) 
   
 Details of Model V2 :
-  -> Predictors are : 
-  -> Hyperparameters are : splitter (default value is "best" ) ; criterion (default value is "gini") 
+
+      Predictors are : ['Age','Sex','SibSp']
+  
+      Hyperparameters are : splitter (default value is "best" ) ; criterion (default value is "gini") 
   
  Since these are two independent project they can also be run using command :
  
@@ -36,6 +40,6 @@ Details of Model V2 :
  
           mlflow run <folder_name> -P{hyperparameter}={hyper_parameter_value}
  
- example : For Model v1 , setting parameters random_split as 23 and max _depth as 10 , command will be :
+ Example : For Model v1 , setting parameters random_split as 23 and max _depth as 10 , command will be :
  
           mlflow run v1 -Prandom_split=23 -Pmax_depth=10
